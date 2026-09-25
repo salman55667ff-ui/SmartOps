@@ -1,0 +1,18 @@
+[project]
+name = "smartops"
+version = "1.0.0"
+description = "AI-Powered Employee Task & Workflow Management System"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi[standard]==0.141.1",
+    "sqlalchemy==2.0.52",
+    "psycopg2-binary==2.9.12",
+    "python-dotenv==1.2.3",
+    "python-jose==3.5.0",
+    "passlib==1.7.4",
+    "bcrypt==4.0.1",
+    "google-genai==2.23.0"
+]
+
+[tool.fastapi]
+entrypoint = "main:app"

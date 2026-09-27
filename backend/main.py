@@ -47,7 +47,7 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        # Vite ports
+        # Local Vite ports
         "http://localhost:5173",
         "http://127.0.0.1:5173",
 
@@ -62,6 +62,9 @@ app.add_middleware(
 
         "http://localhost:5177",
         "http://127.0.0.1:5177",
+
+        # Live Vercel Frontend
+        "https://smart-ops-nine.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
@@ -250,3 +253,4 @@ app.include_router(tasks_router)
 app.include_router(dashboard_router)
 app.include_router(workflow_router)
 app.include_router(ai_router)
+
